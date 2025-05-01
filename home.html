@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élégance Immobilier - Votre Expert en Propriétés de Luxe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e67e22;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            background-color: rgba(44, 62, 80, 0.95);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s 0.5s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: fadeInUp 1s 1s both;
+        }
+        
+        .btn:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+            height: 400px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            width: 100%;
+            height: 100%;
+            border: 5px solid var(--secondary-color);
+            border-radius: 8px;
+            z-index: -1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        /* Directrice Section */
+        .directrice {
+            background-color: var(--light-color);
+        }
+        
+        .directrice-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .directrice-image {
+            flex: 1;
+            max-width: 300px;
+        }
+        
+        .directrice-image img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .directrice-text {
+            flex: 2;
+        }
+        
+        .directrice-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .directrice-text .position {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Properties Section */
+        .properties {
+            background-color: white;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .property-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .property-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .property-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .property-card:hover .property-image img {
+            transform: scale(1.1);
+        }
+        
+        .property-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .property-content {
+            padding: 20px;
+        }
+        
+        .property-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .property-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #777;
+        }
+        
+        .property-location i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .property-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-top: 10px;
+        }
+        
+        .property-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .property-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .property-link i {
+            margin-left: 5px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-color);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-details {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .directrice-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-image,
+            .directrice-image {
+                margin-bottom: 30px;
+            }
+            
+            .directrice-image {
+                max-width: 200px;
+                margin: 0 auto 30px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hamburger {
+                display: block;
+                z-index: 2;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.5s ease;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+        }
+        
+        .reveal.fade-bottom {
+            transform: translateY(50px);
+        }
+        
+        .reveal.fade-bottom.active {
+            transform: translateY(0);
+        }
+        
+        .reveal.fade-left {
+            transform: translateX(-50px);
+        }
+        
+        .reveal.fade-left.active {
+            transform: translateX(0);
+        }
+        
+        .reveal.fade-right {
+            transform: translateX(50px);
+        }
+        
+        .reveal.fade-right.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-home"></i>
+                    Élégance Immobilier
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#directrice">La Directrice</a></li>
+                    <li><a href="#properties">Nos Biens</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Découvrez l'Excellence Immobilière</h1>
+                <p>Chez Élégance Immobilier, nous transformons vos rêves en adresses. Notre expertise et notre engagement pour l'excellence font de nous le partenaire idéal pour votre prochain investissement immobilier.</p>
+                <a href="#properties" class="btn">Voir nos propriétés</a>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À Propos de Nous</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal fade-right">
+                    <img src="/api/placeholder/600/400" alt="Notre équipe">
+                </div>
+                <div class="about-text reveal fade-left">
+                    <h3>L'Excellence Immobilière depuis 2010</h3>
+                    <p>Fondée en 2010, Élégance Immobilier s'est rapidement imposée comme un leader du marché immobilier de luxe. Notre philosophie repose sur l'écoute attentive des besoins de nos clients et la recherche constante de biens d'exception qui répondent à leurs attentes les plus exigeantes.</p>
+                    <p>Notre équipe de professionnels passionnés combine expertise locale, connaissance approfondie du marché et réseau privilégié pour vous offrir un service personnalisé et des opportunités immobilières exclusives.</p>
+                    <p>Que vous soyez à la recherche d'un appartement en centre-ville, d'une villa avec vue mer ou d'une propriété d'exception, nous vous accompagnons à chaque étape de votre projet immobilier pour en faire une expérience sereine et agréable.</p>
+                    <a href="#properties" class="btn">Découvrir nos biens</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directrice Section -->
+    <section id="directrice" class="section directrice">
+        <div class="container">
+            <div class="section-title">
+                <h2>Le Mot de la Directrice</h2>
+            </div>
+            <div class="directrice-content">
+                <div class="directrice-image reveal fade-right">
+                    <img src="/api/placeholder/300/300" alt="Sophie Durand, Directrice">
+                </div>
+                <div class="directrice-text reveal fade-left">
+                    <h3>Sophie Durand</h3>
+                    <span class="position">Fondatrice & Directrice</span>
+                    <p>Après 15 ans d'expérience dans l'immobilier de prestige à Paris et à l'international, j'ai fondé Élégance Immobilier avec une vision claire : créer une agence qui place l'humain et l'excellence au cœur de chaque transaction.</p>
+                    <blockquote class="quote">
+                        "Je crois profondément que chaque bien immobilier raconte une histoire et que notre rôle est de trouver la parfaite adéquation entre cette histoire et les aspirations de nos clients. L'immobilier n'est pas qu'une question de murs et de toits, c'est avant tout une question d'émotions et de projets de vie."
+                    </blockquote>
+                    <p>Notre équipe, composée d'experts passionnés et dévoués, partage cette philosophie et travaille chaque jour pour vous offrir un service sur mesure, une sélection rigoureuse de biens d'exception et un accompagnement sans faille tout au long de votre projet immobilier.</p>
+                    <p>Je vous invite à découvrir notre portefeuille de propriétés exclusives et à nous contacter pour donner vie à vos projets immobiliers les plus ambitieux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="section properties">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Propriétés de Prestige</h2>
+            </div>
+            <div class="properties-grid">
+                <!-- Property 1 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Villa Méditerranée">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Villa Méditerranée</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cannes, Côte d'Azur</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>180 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 salles de bain</span>
+                            </div>
+                        </div>
+                        <p>Spectaculaire penthouse avec terrasse panoramique de 80m², intérieur design, domotique intégrée et services de conciergerie. Accès direct à la plage et vue mer à 180°.</p>
+                        <div class="property-price">3 200 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Property 5 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Chalet Alpin">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Chalet Alpin</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Megève, Alpes Françaises</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>350 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>6 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Accès pistes</span>
+                            </div>
+                        </div>
+                        <p>Luxueux chalet ski-in/ski-out avec spa, salle de cinéma, cave à vin et service de conciergerie. Alliance parfaite entre tradition montagnarde et confort moderne à deux pas des pistes.</p>
+                        <div class="property-price">4 800 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Property 6 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Manoir Historique">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Manoir Historique</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Loire Valley, France</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>800 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tree"></i>
+                                <span>5 hectares</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-swimming-pool"></i>
+                                <span>Piscine & Tennis</span>
+                            </div>
+                        </div>
+                        <p>Élégant manoir du 18ème siècle classé Monument Historique. Parfaitement restauré, il offre un cadre de vie exceptionnel avec son parc à la française, ses écuries et sa chapelle privée.</p>
+                        <div class="property-price">2 750 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-Nous</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal fade-right">
+                    <h3>Nos Coordonnées</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>128 Avenue des Champs-Élysées, 75008 Paris, France</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+33 1 42 68 53 00</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@elegance-immobilier.fr</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lundi - Vendredi: 9h - 19h<br>Samedi: 10h - 17h</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="achat">Achat de propriété</option>
+                                <option value="vente">Vente de propriété</option>
+                                <option value="estimation">Estimation gratuite</option>
+                                <option value="investissement">Conseil en investissement</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Élégance Immobilier</h3>
+                    <p>Votre partenaire de confiance pour tous vos projets immobiliers de prestige. Notre engagement : l'excellence à chaque étape de votre expérience immobilière.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#directrice">La Directrice</a></li>
+                        <li><a href="#properties">Nos Biens</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Nos Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Vente de propriétés</a></li>
+                        <li><a href="#">Achat sur mesure</a></li>
+                        <li><a href="#">Estimation gratuite</a></li>
+                        <li><a href="#">Conseil en investissement</a></li>
+                        <li><a href="#">Conciergerie privée</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos dernières offres exclusives et nos conseils d'experts.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" class="form-control">
+                        <button type="submit" class="btn">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Élégance Immobilier. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+        
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple validation
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                if (name && email && phone && subject && message) {
+                    // Simulation d'envoi de formulaire
+                    this.reset();
+                    alert('Merci pour votre message ! Nous vous contacterons rapidement.');
+                } else {
+                    alert('Veuillez remplir tous les champs du formulaire.');
+                }
+            });
+        }
+        
+        // Property Filtering (Pour une future fonctionnalité)
+        const setupFiltering = () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const propertyCards = document.querySelectorAll('.property-card');
+            
+            if (filterButtons.length) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Reset active class
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        const filter = button.getAttribute('data-filter');
+                        
+                        propertyCards.forEach(card => {
+                            if (filter === 'all') {
+                                card.style.display = 'block';
+                            } else {
+                                if (card.classList.contains(filter)) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            }
+                        });
+                    });
+                });
+            }
+        };
+        
+        // Testimonial Slider (Pour une future fonctionnalité)
+        const setupTestimonialSlider = () => {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            
+            if (testimonials.length) {
+                const showSlide = (n) => {
+                    testimonials.forEach((slide, i) => {
+                        slide.style.display = 'none';
+                        dots[i].classList.remove('active');
+                    });
+                    
+                    testimonials[n].style.display = 'block';
+                    dots[n].classList.add('active');
+                };
+                
+                const nextSlide = () => {
+                    currentSlide = (currentSlide + 1) % testimonials.length;
+                    showSlide(currentSlide);
+                };
+                
+                // Initial display
+                showSlide(currentSlide);
+                
+                // Auto-rotate slides
+                setInterval(nextSlide, 5000);
+                
+                // Dot navigation
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = i;
+                        showSlide(currentSlide);
+                    });
+                });
+            }
+        };
+        
+        // Add-to-favorites functionality (Pour une future fonctionnalité)
+        const setupFavorites = () => {
+            const favButtons = document.querySelectorAll('.fav-btn');
+            
+            if (favButtons.length) {
+                favButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        button.classList.toggle('active');
+                        
+                        const propertyId = button.getAttribute('data-id');
+                        const isFavorite = button.classList.contains('active');
+                        
+                        // Here you would typically send an AJAX request to update favorites
+                        console.log(`Property ID ${propertyId} is ${isFavorite ? 'now' : 'no longer'} a favorite`);
+                        
+                        if (isFavorite) {
+                            button.innerHTML = '<i class="fas fa-heart"></i>';
+                            showNotification('Propriété ajoutée aux favoris');
+                        } else {
+                            button.innerHTML = '<i class="far fa-heart"></i>';
+                            showNotification('Propriété retirée des favoris');
+                        }
+                    });
+                });
+            }
+        };
+        
+        // Notification system
+        const showNotification = (message) => {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        };
+        
+        // Property Search (Pour une future fonctionnalité)
+        const initSearch = () => {
+            const searchForm = document.getElementById('propertySearch');
+            
+            if (searchForm) {
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Here you would typically handle the search
+                    const location = document.getElementById('searchLocation').value;
+                    const type = document.getElementById('searchType').value;
+                    const priceRange = document.getElementById('searchPrice').value;
+                    
+                    console.log(`Search: Location=${location}, Type=${type}, Price=${priceRange}`);
+                    showNotification('Recherche en cours...');
+                });
+            }
+        };
+        
+        // Initialize all functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            setupFiltering();
+            setupTestimonialSlider();
+            setupFavorites();
+            initSearch();
+        });
+    </script>
+</body>
+</html>-alt"></i>
+                            <span>Saint-Tropez, France</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>450 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>5 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>4 salles de bain</span>
+                            </div>
+                        </div>
+                        <p>Magnifique villa avec vue panoramique sur la mer, piscine à débordement, jardin paysager et accès direct à une plage privée. Architecture contemporaine alliant luxe et confort.</p>
+                        <div class="property-price">2 950 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Appartement Haussmannien">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Appartement Haussmannien</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>16ème arrondissement, Paris</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>210 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 chambres</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 salles de bain</span>
+                            </div>
+                        </div>
+                        <p>Sublime appartement haussmannien entièrement rénové avec prestations haut de gamme. Moulures, parquet point de Hongrie, cheminées d'époque et vue imprenable sur la Tour Eiffel.</p>
+                        <div class="property-price">1 850 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Domaine Viticole">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Domaine Viticole</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Saint-Émilion, Bordeaux</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>15 hectares</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-home"></i>
+                                <span>Château 600 m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-wine-bottle"></i>
+                                <span>Chai moderne</span>
+                            </div>
+                        </div>
+                        <p>Exceptionnel domaine viticole produisant des grands crus classés. Château du 18ème siècle rénové, chai moderne et 15 hectares de vignes en pleine production. Opportunité d'investissement rare.</p>
+                        <div class="property-price">4 500 000 €</div>
+                        <a href="#" class="property-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Property 4 -->
+                <div class="property-card reveal fade-bottom">
+                    <div class="property-image">
+                        <img src="/api/placeholder/600/400" alt="Penthouse Contemporain">
+                        <div class="property-badge">À Vendre</div>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Penthouse Contemporain</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker
