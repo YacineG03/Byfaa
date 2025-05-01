@@ -1,0 +1,268 @@
+.property-detail {
+    padding-top: 100px;
+    padding-bottom: 5rem;
+  }
+  
+  .property-detail-back {
+    margin-bottom: 2rem;
+  }
+  
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray);
+    transition: var(--transition);
+  }
+  
+  .back-link:hover {
+    color: var(--color-primary);
+  }
+  
+  .property-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+  
+  .property-detail-image-main {
+    height: 500px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+  }
+  
+  .property-detail-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .property-detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .property-detail-thumbnail {
+    height: 80px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .property-detail-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .property-detail-thumbnail.active {
+    border: 2px solid var(--color-primary);
+  }
+  
+  .property-detail-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .property-detail-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-detail-features {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-detail-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-dark);
+  }
+  
+  .property-detail-feature svg {
+    color: var(--color-primary);
+  }
+  
+  .property-detail-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .property-detail-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  
+  .property-detail-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-light-gray);
+    color: var(--color-dark);
+    transition: var(--transition);
+  }
+  
+  .btn-icon:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .property-detail-section {
+    margin-bottom: 2rem;
+  }
+  
+  .property-detail-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .property-detail-description {
+    white-space: pre-line;
+    line-height: 1.8;
+    color: var(--color-gray);
+  }
+  
+  .property-detail-characteristics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .property-detail-characteristic {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .property-detail-characteristic-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+  
+  .property-detail-contact-form {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+  }
+  
+  .property-detail-form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .property-detail-agent {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .property-detail-agent-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-detail-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-detail-agent-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .property-detail-agent-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .property-detail-agent-role {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+  }
+  
+  .property-detail-agent-contact {
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-detail-agent-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .property-detail-agent-contact-item svg {
+    color: var(--color-primary);
+  }
+  
+  .property-detail-agent-availability {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  .property-detail-agent-availability svg {
+    color: var(--color-primary);
+  }
+  
+  @media (max-width: 992px) {
+    .property-detail-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .property-detail-image-main {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .property-detail-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .property-detail-features {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
