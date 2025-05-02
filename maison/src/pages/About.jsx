@@ -1,5 +1,5 @@
 import { Award, Target, Shield } from "lucide-react";
-import logoNoir from "../assets/logoNoir.jpeg";
+import logoNoir from "/assets/logoNoir.jpeg";
 
 const About = () => {
   return (

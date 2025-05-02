@@ -1,24 +1,24 @@
-import { Link } from "react-router-dom"
-import { Search, HomeIcon, TrendingUp, Award } from "lucide-react"
-import PropertyCard from "../components/PropertyCard"
-import TestimonialCard from "../components/TestimonialCard"
-import { properties } from "../data/properties"
+import { Link } from "react-router-dom";
+import { Search, HomeIcon, TrendingUp, Award } from "lucide-react";
+import PropertyCard from "../components/PropertyCard";
+import TestimonialCard from "../components/TestimonialCard";
+import { properties } from "../data/properties";
 
 const Home = () => {
   // Prendre seulement les 3 premières propriétés pour la section "Featured"
-  const featuredProperties = properties.slice(0, 3)
+  const featuredProperties = properties.slice(0, 3);
 
   return (
     <>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="/placeholder.svg?height=1080&width=1920" alt="Luxury Home" />
+          <img src="/assets/bg.jpeg" alt="BYFA Group Background" />
         </div>
         <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">Trouvez la Maison de Vos Rêves</h1>
+            {/* <h1 className="hero-title">Trouvez la Maison de Vos Rêves</h1> */}
             <p className="hero-subtitle">
               Des propriétés d'exception sélectionnées pour vous par notre équipe d'experts immobiliers.
             </p>
@@ -177,7 +177,7 @@ const Home = () => {
       {/* Director's Message */}
       <section className="section" style={{ backgroundColor: "#f0f0f0" }}>
         <div className="container">
-          <h2 className="section-title">Message du Directeur</h2>
+          <h2 className="section-title">Le mot de la Directrice</h2>
           <blockquote className="director-quote">
             "Chez BYFA Group, nous croyons que chaque maison raconte une histoire et que chaque client mérite de trouver
             celle qui lui correspond parfaitement. Notre mission est de vous accompagner dans cette quête avec passion,
@@ -200,19 +200,19 @@ const Home = () => {
               {
                 name: "Jean Martin",
                 role: "Propriétaire à Paris",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/assets/image.png",
                 text: "Grâce à BYFA Group, j'ai vendu ma maison en moins de 3 semaines à un prix supérieur à mes attentes. Leur expertise du marché parisien est impressionnante.",
               },
               {
                 name: "Marie Leclerc",
                 role: "Acheteuse à Lyon",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/assets/image.png",
                 text: "L'équipe a parfaitement compris nos besoins et nous a présenté des propriétés qui correspondaient exactement à nos critères. Un accompagnement de qualité du début à la fin.",
               },
               {
                 name: "Pierre Dubois",
                 role: "Investisseur",
-                image: "/placeholder.svg?height=100&width=100",
+                image: "/assets/image.png",
                 text: "Je travaille avec BYFA Group depuis 5 ans pour mes investissements immobiliers. Leur conseil avisé m'a permis de constituer un portefeuille rentable et diversifié.",
               },
             ].map((testimonial, index) => (
@@ -236,7 +236,7 @@ const Home = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
