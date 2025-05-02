@@ -31,7 +31,7 @@ const Navbar = () => {
       <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="container navbar-container">
           <Link to="/" className="navbar-logo">
-            BYFA<span>Group</span>
+            BYFAA<span>Group</span>
           </Link>
 
           <nav>
@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <div className="mobile-menu-header">
           <Link to="/" className="navbar-logo">
-            BYFA<span>Group</span>
+            BYFAA<span>Group</span>
           </Link>
           <button className="mobile-menu-close" onClick={() => setIsOpen(false)}>
             <X />

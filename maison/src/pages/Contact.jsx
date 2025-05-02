@@ -101,8 +101,8 @@ const Contact = () => {
                   <div>
                     <h3 style={{ fontSize: "18px", marginBottom: "5px" }}>Téléphone</h3>
                     <p>
-                      <a href="tel:+33123456789" style={{ color: "#666" }}>
-                        +33 1 23 45 67 89
+                      <a href="tel:+221778863664" style={{ color: "#666" }}>
+                        +221 77 886 36 64
                       </a>
                     </p>
                   </div>
@@ -126,8 +126,8 @@ const Contact = () => {
                   <div>
                     <h3 style={{ fontSize: "18px", marginBottom: "5px" }}>Email</h3>
                     <p>
-                      <a href="mailto:contact@byfagroup.fr" style={{ color: "#666" }}>
-                        contact@byfagroup.fr
+                      <a href="mailto:Byfagroup11@gmail.com" style={{ color: "#666" }}>
+                        Byfagroup11@gmail.com
                       </a>
                     </p>
                   </div>
@@ -365,7 +365,7 @@ const Contact = () => {
         <div className="container">
           <h2 className="section-title">Notre Emplacement</h2>
           <p style={{ textAlign: "center", maxWidth: "700px", margin: "0 auto 40px" }}>
-            Venez nous rendre visite dans notre agence située au cœur de Paris, facilement accessible en transports en
+            Venez nous rendre visite dans notre agence située au cœur de Dakar, facilement accessible en transports en
             commun.
           </p>
 
@@ -383,8 +383,8 @@ const Contact = () => {
           >
             <div style={{ textAlign: "center" }}>
               <MapPin size={64} style={{ color: "#9c6644", marginBottom: "20px" }} />
-              <p style={{ fontSize: "24px", marginBottom: "10px" }}>123 Avenue des Champs-Élysées</p>
-              <p style={{ fontSize: "18px" }}>75008 Paris, France</p>
+              <p style={{ fontSize: "24px", marginBottom: "10px" }}>Cité Cheikh Ahmadou Bamba</p>
+              <p style={{ fontSize: "18px" }}>12 Dakar, Sénégal</p>
             </div>
           </div>
         </div>

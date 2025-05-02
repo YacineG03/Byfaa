@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <h3 className="footer-logo">
-              BYFA<span>Group</span>
+              BYFAA<span>Group</span>
             </h3>
             <p className="footer-description">
               Votre partenaire de confiance pour trouver la maison de vos rêves. Nous vous accompagnons dans toutes les
@@ -72,21 +72,21 @@ const Footer = () => {
             </div>
             <div className="footer-contact-item">
               <Phone className="footer-contact-icon" size={18} />
-              <a href="tel:+33123456789" className="footer-link">
-                +33 1 23 45 67 89
+              <a href="tel:+221778863664" className="footer-link">
+                +221 77 886 36 64
               </a>
             </div>
             <div className="footer-contact-item">
               <Mail className="footer-contact-icon" size={18} />
-              <a href="mailto:contact@byfagroup.fr" className="footer-link">
-                contact@byfagroup.fr
+              <a href="mailto:Byfagroup11@gmail.com" className="footer-link">
+                Byfagroup11@gmail.com
               </a>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} BYFA Group. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} BYFAA Group S.A.R.L. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
-import { Award, Target, Shield } from "lucide-react"
+import { Award, Target, Shield } from "lucide-react";
+import logoNoir from "../assets/logoNoir.jpeg";
 
 const About = () => {
   return (
@@ -29,7 +30,7 @@ const About = () => {
         <div className="container" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <h1 style={{ fontSize: "36px", marginBottom: "15px" }}>À Propos de BYFA Group</h1>
           <p style={{ fontSize: "18px", maxWidth: "700px", margin: "0 auto" }}>
-            Découvrez notre histoire, notre équipe et notre vision pour l'immobilier de prestige.
+            Découvrez Byfaa Group SARL, Cité Cheikh Ahmadou Bamba, notre équipe et notre vision pour l'immobilier de prestige.
           </p>
         </div>
       </section>
@@ -46,7 +47,7 @@ const About = () => {
             }}
           >
             <div>
-              <h2 style={{ fontSize: "36px", marginBottom: "15px" }}>Notre Histoire</h2>
+              <h2 style={{ fontSize: "36px", marginBottom: "15px" }}>Bourguiba, Cité Cheikh Ahmadou Bamba</h2>
               <div
                 style={{
                   width: "80px",
@@ -56,7 +57,7 @@ const About = () => {
                 }}
               ></div>
               <p style={{ marginBottom: "15px", lineHeight: "1.8" }}>
-                Fondée en 2008 par Sophie Dupont, BYFA Group est née d'une passion pour l'immobilier de qualité et d'une
+                Fondée en 2003 par Mme Bineta Traoré DIOPP, BYFAA Group est née d'une passion pour l'immobilier de qualité et d'une
                 vision claire : offrir un service d'exception à nos clients dans leur recherche du bien idéal.
               </p>
               <p style={{ marginBottom: "15px", lineHeight: "1.8" }}>
@@ -65,16 +66,22 @@ const About = () => {
                 valeurs d'excellence, d'intégrité et de dévouement envers nos clients.
               </p>
               <p style={{ lineHeight: "1.8" }}>
-                Aujourd'hui, BYFA Group est fière d'avoir accompagné plus de 1500 familles dans leurs projets
+                Aujourd'hui, BYFAA Group est fière d'avoir accompagné plus de ..... familles dans leurs projets
                 immobiliers et continue de se distinguer par la qualité de son portefeuille de biens et de ses services
                 personnalisés.
               </p>
             </div>
             <div>
               <img
-                src="/placeholder.svg?height=600&width=800"
-                alt="Notre histoire"
-                style={{ width: "100%", borderRadius: "5px", boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)" }}
+                src={logoNoir}
+                alt="Bourguiba, Cité Cheikh Ahmadou Bamba"
+                style={{
+                  width: "100%",
+                  maxWidth: "800px",
+                  height: "auto",
+                  borderRadius: "5px",
+                  boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)",
+                }}
               />
             </div>
           </div>
@@ -209,7 +216,7 @@ const About = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

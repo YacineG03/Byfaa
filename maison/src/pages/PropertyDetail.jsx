@@ -280,8 +280,8 @@ const PropertyDetail = () => {
               <div style={{ marginBottom: "20px" }}>
                 <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
                   <Phone size={18} style={{ color: "#9c6644", marginRight: "10px" }} />
-                  <a href="tel:+33123456789" style={{ color: "#666" }}>
-                    +33 1 23 45 67 89
+                  <a href="tel:+221778863664" style={{ color: "#666" }}>
+                    +221 77 886 36 64
                   </a>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
